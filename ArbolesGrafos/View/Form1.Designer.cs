@@ -106,8 +106,8 @@
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
             this.splitContainer1.Panel2.Controls.Add(this.tabControl1);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
-            this.splitContainer1.Size = new System.Drawing.Size(1190, 635);
-            this.splitContainer1.SplitterDistance = 235;
+            this.splitContainer1.Size = new System.Drawing.Size(1256, 567);
+            this.splitContainer1.SplitterDistance = 248;
             this.splitContainer1.TabIndex = 0;
             // 
             // btnSalir
@@ -117,7 +117,7 @@
             this.btnSalir.Location = new System.Drawing.Point(12, 440);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(183, 82);
-            this.btnSalir.TabIndex = 3;
+            this.btnSalir.TabIndex = 2;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -129,7 +129,7 @@
             this.btnRutas.Location = new System.Drawing.Point(12, 327);
             this.btnRutas.Name = "btnRutas";
             this.btnRutas.Size = new System.Drawing.Size(183, 82);
-            this.btnRutas.TabIndex = 2;
+            this.btnRutas.TabIndex = 1;
             this.btnRutas.Text = "Sistema de Rutas";
             this.btnRutas.UseVisualStyleBackColor = false;
             this.btnRutas.Click += new System.EventHandler(this.btnRutas_Click);
@@ -141,7 +141,7 @@
             this.btnJerarquia.Location = new System.Drawing.Point(12, 212);
             this.btnJerarquia.Name = "btnJerarquia";
             this.btnJerarquia.Size = new System.Drawing.Size(183, 82);
-            this.btnJerarquia.TabIndex = 1;
+            this.btnJerarquia.TabIndex = 0;
             this.btnJerarquia.Text = "Jerarquia Organizativa";
             this.btnJerarquia.UseVisualStyleBackColor = false;
             this.btnJerarquia.Click += new System.EventHandler(this.btnJerarquia_Click);
@@ -166,11 +166,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.Jerarquia);
             this.tabControl1.Controls.Add(this.Rutas);
-            this.tabControl1.Location = new System.Drawing.Point(1, -24);
+            this.tabControl1.Location = new System.Drawing.Point(0, -23);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(952, 658);
+            this.tabControl1.Size = new System.Drawing.Size(1005, 590);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControl1.TabIndex = 0;
             // 
@@ -191,9 +191,10 @@
             this.Jerarquia.Margin = new System.Windows.Forms.Padding(0);
             this.Jerarquia.Name = "Jerarquia";
             this.Jerarquia.Padding = new System.Windows.Forms.Padding(3);
-            this.Jerarquia.Size = new System.Drawing.Size(944, 629);
+            this.Jerarquia.Size = new System.Drawing.Size(997, 561);
             this.Jerarquia.TabIndex = 0;
             this.Jerarquia.Text = "tabPage1";
+            this.Jerarquia.Click += new System.EventHandler(this.Jerarquia_Click);
             // 
             // lbNodosHijos
             // 
@@ -205,7 +206,7 @@
             this.lbNodosHijos.Location = new System.Drawing.Point(558, 505);
             this.lbNodosHijos.Name = "lbNodosHijos";
             this.lbNodosHijos.Size = new System.Drawing.Size(29, 39);
-            this.lbNodosHijos.TabIndex = 14;
+            this.lbNodosHijos.TabIndex = 18;
             this.lbNodosHijos.Text = "0";
             // 
             // lbNodosTotales
@@ -218,7 +219,7 @@
             this.lbNodosTotales.Location = new System.Drawing.Point(583, 465);
             this.lbNodosTotales.Name = "lbNodosTotales";
             this.lbNodosTotales.Size = new System.Drawing.Size(29, 39);
-            this.lbNodosTotales.TabIndex = 13;
+            this.lbNodosTotales.TabIndex = 16;
             this.lbNodosTotales.Text = "0";
             // 
             // label7
@@ -231,7 +232,7 @@
             this.label7.Location = new System.Drawing.Point(421, 507);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(128, 28);
-            this.label7.TabIndex = 12;
+            this.label7.TabIndex = 17;
             this.label7.Text = "Nodos hijos:";
             // 
             // label6
@@ -244,7 +245,7 @@
             this.label6.Location = new System.Drawing.Point(421, 467);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(148, 28);
-            this.label6.TabIndex = 10;
+            this.label6.TabIndex = 15;
             this.label6.Text = "Nodos totales:";
             // 
             // btnTabRecorrer
@@ -255,7 +256,7 @@
             this.btnTabRecorrer.Location = new System.Drawing.Point(716, 67);
             this.btnTabRecorrer.Name = "btnTabRecorrer";
             this.btnTabRecorrer.Size = new System.Drawing.Size(122, 47);
-            this.btnTabRecorrer.TabIndex = 11;
+            this.btnTabRecorrer.TabIndex = 7;
             this.btnTabRecorrer.Text = "Recorrer";
             this.btnTabRecorrer.UseVisualStyleBackColor = false;
             this.btnTabRecorrer.Click += new System.EventHandler(this.btnTabRecorrer_Click);
@@ -268,7 +269,7 @@
             this.btnTabInsertar.Location = new System.Drawing.Point(552, 67);
             this.btnTabInsertar.Name = "btnTabInsertar";
             this.btnTabInsertar.Size = new System.Drawing.Size(122, 47);
-            this.btnTabInsertar.TabIndex = 10;
+            this.btnTabInsertar.TabIndex = 6;
             this.btnTabInsertar.Text = "Insertar";
             this.btnTabInsertar.UseVisualStyleBackColor = false;
             this.btnTabInsertar.Click += new System.EventHandler(this.btnTabInsertar_Click);
@@ -307,7 +308,7 @@
             this.btnNuevoPuestoSubordinado.Location = new System.Drawing.Point(59, 166);
             this.btnNuevoPuestoSubordinado.Name = "btnNuevoPuestoSubordinado";
             this.btnNuevoPuestoSubordinado.Size = new System.Drawing.Size(275, 62);
-            this.btnNuevoPuestoSubordinado.TabIndex = 9;
+            this.btnNuevoPuestoSubordinado.TabIndex = 11;
             this.btnNuevoPuestoSubordinado.Text = "Nuevo Puesto Subordinado";
             this.btnNuevoPuestoSubordinado.UseVisualStyleBackColor = false;
             this.btnNuevoPuestoSubordinado.Click += new System.EventHandler(this.btnNuevoPuestoSubordinado_Click);
@@ -320,7 +321,7 @@
             this.btnNuevoPuestoPrincipal.Location = new System.Drawing.Point(59, 72);
             this.btnNuevoPuestoPrincipal.Name = "btnNuevoPuestoPrincipal";
             this.btnNuevoPuestoPrincipal.Size = new System.Drawing.Size(273, 62);
-            this.btnNuevoPuestoPrincipal.TabIndex = 8;
+            this.btnNuevoPuestoPrincipal.TabIndex = 10;
             this.btnNuevoPuestoPrincipal.Text = "Nuevo Puesto Principal";
             this.btnNuevoPuestoPrincipal.UseVisualStyleBackColor = false;
             this.btnNuevoPuestoPrincipal.Click += new System.EventHandler(this.btnNuevoPuestoPrincipal_Click);
@@ -335,7 +336,7 @@
             this.tbNuevoPuesto.Location = new System.Drawing.Point(153, 13);
             this.tbNuevoPuesto.Name = "tbNuevoPuesto";
             this.tbNuevoPuesto.Size = new System.Drawing.Size(218, 29);
-            this.tbNuevoPuesto.TabIndex = 7;
+            this.tbNuevoPuesto.TabIndex = 9;
             // 
             // label4
             // 
@@ -347,7 +348,7 @@
             this.label4.Location = new System.Drawing.Point(1, 13);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(149, 28);
-            this.label4.TabIndex = 7;
+            this.label4.TabIndex = 8;
             this.label4.Text = "Nuevo puesto:";
             // 
             // tabRecorrer
@@ -371,7 +372,7 @@
             this.btnRecorrer.Location = new System.Drawing.Point(124, 59);
             this.btnRecorrer.Name = "btnRecorrer";
             this.btnRecorrer.Size = new System.Drawing.Size(160, 62);
-            this.btnRecorrer.TabIndex = 10;
+            this.btnRecorrer.TabIndex = 14;
             this.btnRecorrer.Text = "Ir";
             this.btnRecorrer.UseVisualStyleBackColor = false;
             this.btnRecorrer.Click += new System.EventHandler(this.btnRecorrer_Click_1);
@@ -387,7 +388,7 @@
             this.cbTipoRecorrido.Location = new System.Drawing.Point(192, 7);
             this.cbTipoRecorrido.Name = "cbTipoRecorrido";
             this.cbTipoRecorrido.Size = new System.Drawing.Size(176, 36);
-            this.cbTipoRecorrido.TabIndex = 9;
+            this.cbTipoRecorrido.TabIndex = 13;
             // 
             // label5
             // 
@@ -399,7 +400,7 @@
             this.label5.Location = new System.Drawing.Point(6, 12);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(179, 28);
-            this.label5.TabIndex = 8;
+            this.label5.TabIndex = 12;
             this.label5.Text = "Tipo de recorrido:";
             // 
             // tbBuscar
@@ -411,7 +412,7 @@
             this.tbBuscar.Font = new System.Drawing.Font("Corbel", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbBuscar.Location = new System.Drawing.Point(527, 28);
             this.tbBuscar.Name = "tbBuscar";
-            this.tbBuscar.Size = new System.Drawing.Size(413, 33);
+            this.tbBuscar.Size = new System.Drawing.Size(466, 33);
             this.tbBuscar.TabIndex = 5;
             this.tbBuscar.TextChanged += new System.EventHandler(this.tbBuscar_TextChanged);
             // 
@@ -424,7 +425,7 @@
             this.tvJerarquia.Location = new System.Drawing.Point(6, 5);
             this.tvJerarquia.Name = "tvJerarquia";
             this.tvJerarquia.Size = new System.Drawing.Size(395, 542);
-            this.tvJerarquia.TabIndex = 4;
+            this.tvJerarquia.TabIndex = 3;
             this.tvJerarquia.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvJerarquia_AfterSelect);
             // 
             // label3
@@ -437,7 +438,7 @@
             this.label3.Location = new System.Drawing.Point(420, 28);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 35);
-            this.label3.TabIndex = 3;
+            this.label3.TabIndex = 4;
             this.label3.Text = "Buscar";
             // 
             // Rutas
@@ -460,7 +461,7 @@
             this.Rutas.Location = new System.Drawing.Point(4, 25);
             this.Rutas.Name = "Rutas";
             this.Rutas.Padding = new System.Windows.Forms.Padding(3);
-            this.Rutas.Size = new System.Drawing.Size(944, 629);
+            this.Rutas.Size = new System.Drawing.Size(997, 679);
             this.Rutas.TabIndex = 1;
             this.Rutas.Text = "tabPage2";
             // 
@@ -472,7 +473,7 @@
             this.btnVerListaAdyacencia.Location = new System.Drawing.Point(542, 462);
             this.btnVerListaAdyacencia.Name = "btnVerListaAdyacencia";
             this.btnVerListaAdyacencia.Size = new System.Drawing.Size(287, 47);
-            this.btnVerListaAdyacencia.TabIndex = 26;
+            this.btnVerListaAdyacencia.TabIndex = 17;
             this.btnVerListaAdyacencia.Text = "Ver lista de adyacencia";
             this.btnVerListaAdyacencia.UseVisualStyleBackColor = false;
             this.btnVerListaAdyacencia.Click += new System.EventHandler(this.btnVerListaAdyacencia_Click);
@@ -487,7 +488,7 @@
             this.label2.Location = new System.Drawing.Point(509, 252);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 28);
-            this.label2.TabIndex = 17;
+            this.label2.TabIndex = 12;
             this.label2.Text = "Distancia:";
             // 
             // btnCalcularRuta
@@ -498,7 +499,7 @@
             this.btnCalcularRuta.Location = new System.Drawing.Point(717, 309);
             this.btnCalcularRuta.Name = "btnCalcularRuta";
             this.btnCalcularRuta.Size = new System.Drawing.Size(198, 47);
-            this.btnCalcularRuta.TabIndex = 18;
+            this.btnCalcularRuta.TabIndex = 15;
             this.btnCalcularRuta.Text = "Calcular Ruta";
             this.btnCalcularRuta.UseVisualStyleBackColor = false;
             this.btnCalcularRuta.Click += new System.EventHandler(this.btnCalcularRuta_Click);
@@ -512,8 +513,8 @@
             this.tbDistancia.Font = new System.Drawing.Font("Corbel", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDistancia.Location = new System.Drawing.Point(631, 252);
             this.tbDistancia.Name = "tbDistancia";
-            this.tbDistancia.Size = new System.Drawing.Size(252, 33);
-            this.tbDistancia.TabIndex = 16;
+            this.tbDistancia.Size = new System.Drawing.Size(305, 33);
+            this.tbDistancia.TabIndex = 13;
             // 
             // btnAgregarRuta
             // 
@@ -523,7 +524,7 @@
             this.btnAgregarRuta.Location = new System.Drawing.Point(479, 309);
             this.btnAgregarRuta.Name = "btnAgregarRuta";
             this.btnAgregarRuta.Size = new System.Drawing.Size(198, 47);
-            this.btnAgregarRuta.TabIndex = 17;
+            this.btnAgregarRuta.TabIndex = 14;
             this.btnAgregarRuta.Text = "Agregar Ruta";
             this.btnAgregarRuta.UseVisualStyleBackColor = false;
             this.btnAgregarRuta.Click += new System.EventHandler(this.btnAgregarRuta_Click);
@@ -538,7 +539,7 @@
             this.label10.Location = new System.Drawing.Point(532, 191);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(83, 28);
-            this.label10.TabIndex = 25;
+            this.label10.TabIndex = 10;
             this.label10.Text = "Origen:";
             // 
             // label9
@@ -551,7 +552,7 @@
             this.label9.Location = new System.Drawing.Point(525, 136);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(90, 28);
-            this.label9.TabIndex = 24;
+            this.label9.TabIndex = 8;
             this.label9.Text = "Destino:";
             // 
             // label8
@@ -564,7 +565,7 @@
             this.label8.Location = new System.Drawing.Point(471, 14);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(152, 28);
-            this.label8.TabIndex = 18;
+            this.label8.TabIndex = 5;
             this.label8.Text = "Nuevo edificio:";
             // 
             // panel1
@@ -573,7 +574,7 @@
             this.panel1.Controls.Add(this.lblListaAdyacencia);
             this.panel1.Location = new System.Drawing.Point(4, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(453, 595);
+            this.panel1.Size = new System.Drawing.Size(461, 542);
             this.panel1.TabIndex = 22;
             // 
             // lblListaAdyacencia
@@ -584,7 +585,7 @@
             this.lblListaAdyacencia.Font = new System.Drawing.Font("Corbel", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblListaAdyacencia.Location = new System.Drawing.Point(3, 6);
             this.lblListaAdyacencia.Name = "lblListaAdyacencia";
-            this.lblListaAdyacencia.Size = new System.Drawing.Size(447, 583);
+            this.lblListaAdyacencia.Size = new System.Drawing.Size(8, 0);
             this.lblListaAdyacencia.TabIndex = 4;
             // 
             // btnValidarConexion
@@ -595,7 +596,7 @@
             this.btnValidarConexion.Location = new System.Drawing.Point(591, 387);
             this.btnValidarConexion.Name = "btnValidarConexion";
             this.btnValidarConexion.Size = new System.Drawing.Size(198, 47);
-            this.btnValidarConexion.TabIndex = 19;
+            this.btnValidarConexion.TabIndex = 16;
             this.btnValidarConexion.Text = "Validar conexión";
             this.btnValidarConexion.UseVisualStyleBackColor = false;
             this.btnValidarConexion.Click += new System.EventHandler(this.btnValidarConexion_Click);
@@ -607,7 +608,7 @@
             this.cbDestino.Location = new System.Drawing.Point(630, 133);
             this.cbDestino.Name = "cbDestino";
             this.cbDestino.Size = new System.Drawing.Size(176, 36);
-            this.cbDestino.TabIndex = 15;
+            this.cbDestino.TabIndex = 9;
             this.cbDestino.Text = "destino";
             // 
             // cbOrigen
@@ -617,7 +618,7 @@
             this.cbOrigen.Location = new System.Drawing.Point(630, 188);
             this.cbOrigen.Name = "cbOrigen";
             this.cbOrigen.Size = new System.Drawing.Size(176, 36);
-            this.cbOrigen.TabIndex = 13;
+            this.cbOrigen.TabIndex = 11;
             this.cbOrigen.Text = "origen";
             // 
             // btnAgregarEdificio
@@ -628,7 +629,7 @@
             this.btnAgregarEdificio.Location = new System.Drawing.Point(610, 57);
             this.btnAgregarEdificio.Name = "btnAgregarEdificio";
             this.btnAgregarEdificio.Size = new System.Drawing.Size(161, 47);
-            this.btnAgregarEdificio.TabIndex = 11;
+            this.btnAgregarEdificio.TabIndex = 7;
             this.btnAgregarEdificio.Text = "Agregar Edificio";
             this.btnAgregarEdificio.UseVisualStyleBackColor = false;
             this.btnAgregarEdificio.Click += new System.EventHandler(this.btnAgregarEdificio_Click);
@@ -642,7 +643,7 @@
             this.tbEdificio.Font = new System.Drawing.Font("Corbel", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbEdificio.Location = new System.Drawing.Point(644, 10);
             this.tbEdificio.Name = "tbEdificio";
-            this.tbEdificio.Size = new System.Drawing.Size(273, 33);
+            this.tbEdificio.Size = new System.Drawing.Size(326, 33);
             this.tbEdificio.TabIndex = 6;
             // 
             // pictureBox1
@@ -660,11 +661,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1190, 635);
+            this.ClientSize = new System.Drawing.Size(1256, 567);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Innovatec";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
