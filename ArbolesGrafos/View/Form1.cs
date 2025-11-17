@@ -21,35 +21,39 @@ namespace ArbolesGrafos.View
             tabControlJerarquia.SizeMode = TabSizeMode.Fixed;
         }
 
+        //No hace nada, pero si la borran se daña TODO
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
+        #region botones del menú
         private void btnJerarquia_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedTab = Jerarquia;
             btnJerarquia.Enabled = false;
             btnRutas.Enabled = true;
         }
-
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         private void btnRutas_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedTab = Rutas;
             btnJerarquia.Enabled = true;
             btnRutas.Enabled = false;
         }
+        #endregion
 
-        private void Jerarquia_Click(object sender, EventArgs e)
+        #region funciones de insertar
+        private void btnTabInsertar_Click(object sender, EventArgs e)
         {
+            tabControlJerarquia.SelectedTab = tabInsertar;
+            btnTabInsertar.Enabled = false;
+            btnTabRecorrer.Enabled = true;
 
         }
-
         private void btnNuevoPuestoPrincipal_Click(object sender, EventArgs e)
         {
             string nombreRaiz = tbNuevoPuesto.Text;
@@ -96,7 +100,9 @@ namespace ArbolesGrafos.View
                 lbNodosHijos.Text = Convert.ToString(tvJerarquia.SelectedNode.GetNodeCount(true)); 
             }
         }
+        #endregion
 
+        #region funciones de buscar
         private void ResaltarNodos(TreeNodeCollection nodos, string busqueda, Color colorResaltado, Color colorDefecto)
         {
             foreach (TreeNode nodo in nodos)
@@ -127,22 +133,15 @@ namespace ArbolesGrafos.View
             tvJerarquia.ExpandAll();
         }
 
-        private void btnTabInsertar_Click(object sender, EventArgs e)
-        {
-            tabControlJerarquia.SelectedTab = tabInsertar;
-            btnTabInsertar.Enabled = false;
-            btnTabRecorrer.Enabled = true;
+        #endregion
 
-        }
-
-        private void btnRecorrer_Click(object sender, EventArgs e)
+        #region Funciones Para Recorrer
+        private void btnTabRecorrer_Click(object sender, EventArgs e)
         {
             tabControlJerarquia.SelectedTab = tabRecorrer;
             btnTabInsertar.Enabled = true;
             btnTabRecorrer.Enabled = false;
         }
-
-        #region Funciones Para Recorrer
         private async void btnRecorrer_Click_1(object sender, EventArgs e)
         {
             Color colorDefectoFuente = tvJerarquia.ForeColor;
@@ -218,7 +217,6 @@ namespace ArbolesGrafos.View
             await VisitarNodo(nodo, fuenteRes, fuenteDef);
         }
         #endregion
-
         private void tvJerarquia_AfterSelect(object sender, TreeViewEventArgs e)
         {
             lbNodosTotales.Text = Convert.ToString(tvJerarquia.GetNodeCount(true));
