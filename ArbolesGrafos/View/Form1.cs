@@ -54,6 +54,11 @@ namespace ArbolesGrafos.View
             btnTabRecorrer.Enabled = true;
 
         }
+        /// <summary>
+        /// Añade una nueva raíz al árbol. También actualiza nodos totales e hijos.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnNuevoPuestoPrincipal_Click(object sender, EventArgs e)
         {
             string nombreRaiz = tbNuevoPuesto.Text;
@@ -74,6 +79,11 @@ namespace ArbolesGrafos.View
             }
         }
 
+        /// <summary>
+        /// Añade un nuevo nodo hijo al nodo seleccionado. También actauliza nodos totales e hijos.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnNuevoPuestoSubordinado_Click(object sender, EventArgs e)
         {
             string nombrePuesto = tbNuevoPuesto.Text;
@@ -103,6 +113,14 @@ namespace ArbolesGrafos.View
         #endregion
 
         #region funciones de buscar
+
+        /// <summary>
+        /// Resalta los nodos pasados como argumento con el color seleccionado si coinciden con la búsqueda.
+        /// </summary>
+        /// <param name="nodos"></param>
+        /// <param name="busqueda"></param>
+        /// <param name="colorResaltado"></param>
+        /// <param name="colorDefecto"></param>
         private void ResaltarNodos(TreeNodeCollection nodos, string busqueda, Color colorResaltado, Color colorDefecto)
         {
             foreach (TreeNode nodo in nodos)
@@ -122,6 +140,11 @@ namespace ArbolesGrafos.View
             }
         }
 
+        /// <summary>
+        /// Maneja el evento de cambio de texto en el tbBuscar. Setea los colores de resaltado y por defecto y llama a la función para resaltar nodos.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbBuscar_TextChanged(object sender, EventArgs e)
         {
             tvJerarquia.SelectedNode = null;
@@ -142,6 +165,12 @@ namespace ArbolesGrafos.View
             btnTabInsertar.Enabled = true;
             btnTabRecorrer.Enabled = false;
         }
+
+        /// <summary>
+        /// Llama a la función correspondiente según el tipo de recorrido seleccionado. Setea los colores por defecto y de resaltado, pasándoles como argumento las raíces del árbol y los colores.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void btnRecorrer_Click_1(object sender, EventArgs e)
         {
             Color colorDefectoFuente = tvJerarquia.ForeColor;
@@ -167,6 +196,13 @@ namespace ArbolesGrafos.View
             }
         }
 
+        /// <summary>
+        /// Cambia el color del nodo por 500 milisegundos.
+        /// </summary>
+        /// <param name="nodo"></param>
+        /// <param name="fuenteRes"></param>
+        /// <param name="fuenteDef"></param>
+        /// <returns></returns>
         private async Task VisitarNodo(TreeNode nodo, Color fuenteRes, Color fuenteDef)
         {
             nodo.ForeColor = fuenteRes;
@@ -177,6 +213,13 @@ namespace ArbolesGrafos.View
             nodo.ForeColor = fuenteDef;
         }
 
+        /// <summary>
+        /// Recorre el árbol en preorden, llamando a la función VisitarNodo y a sí misma recursivamente.
+        /// </summary>
+        /// <param name="nodo"></param>
+        /// <param name="fuenteRes"></param>
+        /// <param name="fuenteDef"></param>
+        /// <returns></returns>
         private async Task RecorrerPreorden(TreeNode nodo, Color fuenteRes, Color fuenteDef)
         {
             if (nodo == null) return;
@@ -188,6 +231,13 @@ namespace ArbolesGrafos.View
             }
         }
 
+        /// <summary>
+        /// Recorre el árbol en inorden, llamando a la función VisitarNodo y a sí misma recursivamente.
+        /// </summary>
+        /// <param name="nodo"></param>
+        /// <param name="fuenteRes"></param>
+        /// <param name="fuenteDef"></param>
+        /// <returns></returns>
         private async Task RecorrerInorden(TreeNode nodo, Color fuenteRes, Color fuenteDef)
         {
             if (nodo == null) return;
@@ -205,6 +255,13 @@ namespace ArbolesGrafos.View
             }
         }
 
+        /// <summary>
+        /// Recorre el árbol en postorden, llamando a la función VisitarNodo y a sí misma recursivamente.
+        /// </summary>
+        /// <param name="nodo"></param>
+        /// <param name="fuenteRes"></param>
+        /// <param name="fuenteDef"></param>
+        /// <returns></returns>
         private async Task RecorrerPostorden(TreeNode nodo, Color fuenteRes, Color fuenteDef)
         {
             if (nodo == null) return;
