@@ -70,6 +70,7 @@
             this.cbOrigen = new System.Windows.Forms.ComboBox();
             this.btnAgregarEdificio = new System.Windows.Forms.Button();
             this.tbEdificio = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -81,6 +82,7 @@
             this.tabRecorrer.SuspendLayout();
             this.Rutas.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -92,6 +94,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(56)))));
+            this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
             this.splitContainer1.Panel1.Controls.Add(this.btnSalir);
             this.splitContainer1.Panel1.Controls.Add(this.btnRutas);
             this.splitContainer1.Panel1.Controls.Add(this.btnJerarquia);
@@ -249,7 +252,7 @@
             this.btnTabRecorrer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(235)))));
             this.btnTabRecorrer.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTabRecorrer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(56)))));
-            this.btnTabRecorrer.Location = new System.Drawing.Point(643, 78);
+            this.btnTabRecorrer.Location = new System.Drawing.Point(716, 67);
             this.btnTabRecorrer.Name = "btnTabRecorrer";
             this.btnTabRecorrer.Size = new System.Drawing.Size(122, 47);
             this.btnTabRecorrer.TabIndex = 11;
@@ -262,7 +265,7 @@
             this.btnTabInsertar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(235)))));
             this.btnTabInsertar.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTabInsertar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(56)))));
-            this.btnTabInsertar.Location = new System.Drawing.Point(479, 78);
+            this.btnTabInsertar.Location = new System.Drawing.Point(552, 67);
             this.btnTabInsertar.Name = "btnTabInsertar";
             this.btnTabInsertar.Size = new System.Drawing.Size(122, 47);
             this.btnTabInsertar.TabIndex = 10;
@@ -274,7 +277,7 @@
             // 
             this.tabControlJerarquia.Controls.Add(this.tabInsertar);
             this.tabControlJerarquia.Controls.Add(this.tabRecorrer);
-            this.tabControlJerarquia.Location = new System.Drawing.Point(416, 114);
+            this.tabControlJerarquia.Location = new System.Drawing.Point(489, 103);
             this.tabControlJerarquia.Margin = new System.Windows.Forms.Padding(0);
             this.tabControlJerarquia.Name = "tabControlJerarquia";
             this.tabControlJerarquia.Padding = new System.Drawing.Point(0, 0);
@@ -457,7 +460,7 @@
             this.Rutas.Location = new System.Drawing.Point(4, 25);
             this.Rutas.Name = "Rutas";
             this.Rutas.Padding = new System.Windows.Forms.Padding(3);
-            this.Rutas.Size = new System.Drawing.Size(943, 629);
+            this.Rutas.Size = new System.Drawing.Size(944, 629);
             this.Rutas.TabIndex = 1;
             this.Rutas.Text = "tabPage2";
             // 
@@ -642,6 +645,16 @@
             this.tbEdificio.Size = new System.Drawing.Size(273, 33);
             this.tbEdificio.TabIndex = 6;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ArbolesGrafos.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(55, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(108, 128);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -668,6 +681,7 @@
             this.Rutas.ResumeLayout(false);
             this.Rutas.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -716,5 +730,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbDistancia;
         private System.Windows.Forms.Button btnAgregarRuta;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
