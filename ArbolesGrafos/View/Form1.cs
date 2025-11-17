@@ -293,23 +293,16 @@ namespace ArbolesGrafos.View
             }
         }
 
-        #region Eventos de la Pestaña Rutas (AÑADIDO)
-
-        // Asume que tienes controles llamados:
-        // tbEdificio, btnAgregarEdificio, cbOrigen, cbDestino,
-        // txtDistancia, btnAgregarRuta, btnCalcularRuta,
-        // btnValidarConexion, btnMostrarAdyacencia, tbListaAdyacencia
+        #region Eventos de la Pestaña Rutas
 
         private void btnAgregarEdificio_Click(object sender, EventArgs e)
         {
-            // 1. Llama al Controlador
-            EstadoRuta resultado = _rutaController.AgregarEdificio(textBox1.Text);
+            EstadoRuta resultado = _rutaController.AgregarEdificio(tbEdificio.Text);
 
-            // 2. La Vista decide qué hacer
             if (resultado == EstadoRuta.Exito)
             {
-                ActualizarComboBoxEdificios(); // La Vista se actualiza
-                textBox1.Clear();
+                ActualizarComboBoxEdificios();
+                tbEdificio.Clear();
             }
             else if (resultado == EstadoRuta.NombreVacio)
             {
@@ -332,20 +325,18 @@ namespace ArbolesGrafos.View
                 return;
             }
 
-            if (!int.TryParse(txtDistancia.Text, out int distancia))
+            if (!int.TryParse(tbDistancia.Text, out int distancia))
             {
                 MessageBox.Show("La distancia debe ser un número entero válido.");
                 return;
             }
 
-            // 1. Llama al Controlador
             EstadoRuta resultado = _rutaController.AgregarRuta(origen, destino, distancia);
 
-            // 2. La Vista decide qué hacer
             if (resultado == EstadoRuta.Exito)
             {
                 MessageBox.Show("Ruta agregada exitosamente.");
-                txtDistancia.Clear();
+                tbDistancia.Clear();
             }
             else if (resultado == EstadoRuta.DistanciaInvalida)
             {
@@ -368,28 +359,24 @@ namespace ArbolesGrafos.View
                 return;
             }
 
-            // 1. Llama al Controlador
             RutaResultado resultado = _rutaController.CalcularRutaMasCorta(origen, destino);
 
-            // 2. La Vista formatea y muestra el resultado
             if (resultado.Encontrada)
             {
                 string rutaFormateada = string.Join(" -> ", resultado.Ruta);
-                txtResultadoRuta.Text = $"Ruta más corta: {rutaFormateada}\r\n"; // Asume un TextBox 'txtResultadoRuta'
-                txtResultadoRuta.Text += $"Distancia total: {resultado.DistanciaTotal} metros.";
+                lblResultadoRuta.Text = $"Ruta más corta: {rutaFormateada}\r\n";
+                lblResultadoRuta.Text += $"Distancia total: {resultado.DistanciaTotal} metros.";
             }
             else
             {
-                txtResultadoRuta.Text = $"Error: {resultado.MensajeError}";
+                lblResultadoRuta.Text = $"Error: {resultado.MensajeError}";
             }
         }
 
         private void btnValidarConexion_Click(object sender, EventArgs e)
         {
-            // 1. Llama al Controlador
             bool esConexo = _rutaController.EsConexo();
 
-            // 2. La Vista muestra el resultado
             if (esConexo)
             {
                 MessageBox.Show("¡Conectado! Todos los edificios son accesibles.");
@@ -402,10 +389,8 @@ namespace ArbolesGrafos.View
 
         private void btnMostrarAdyacencia_Click(object sender, EventArgs e)
         {
-            // 1. La Vista le pide los datos "crudos" al Controlador
             var adyacencias = _rutaController.GetAdyacencias();
 
-            // 2. La Vista se encarga de formatear los datos
             var sb = new System.Text.StringBuilder();
             foreach (var par in adyacencias)
             {
@@ -429,21 +414,16 @@ namespace ArbolesGrafos.View
                     sb.Append(Environment.NewLine);
                 }
             }
-            // 3. La Vista actualiza su propio control TextBox
-            txtListaAdyacencia.Text = sb.ToString(); // Asume un TextBox 'txtListaAdyacencia'
+            lblListaAdyacencia.Text = sb.ToString(); 
         }
 
         #endregion
 
         #region Métodos de Actualización de la Vista (Rutas) (AÑADIDO)
-
-        // Método privado de la Vista para poblar sus ComboBoxes
         private void ActualizarComboBoxEdificios()
         {
-            // 1. Pide los datos al Controlador
             List<string> edificios = _rutaController.GetEdificios();
 
-            // 2. La Vista se actualiza a sí misma
             cbOrigen.DataSource = new List<string>(edificios);
             cbDestino.DataSource = new List<string>(edificios);
         }

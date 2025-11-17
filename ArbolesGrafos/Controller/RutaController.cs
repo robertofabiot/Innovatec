@@ -20,7 +20,6 @@ namespace ArbolesGrafos.Controller
     {
         private Dictionary<string, List<Conexion>> _adyacencias;
 
-        .
         public RutaController()
         {
             _adyacencias = new Dictionary<string, List<Conexion>>();
