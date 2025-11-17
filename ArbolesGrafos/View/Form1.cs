@@ -118,6 +118,7 @@ namespace ArbolesGrafos.View
 
         private void tbBuscar_TextChanged(object sender, EventArgs e)
         {
+            tvJerarquia.SelectedNode = null;
             string busqueda = tbBuscar.Text.ToLower();
 
             Color colorResaltado = Color.Red;
