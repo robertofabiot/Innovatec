@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnRutas = new System.Windows.Forms.Button();
             this.btnJerarquia = new System.Windows.Forms.Button();
@@ -70,11 +71,11 @@
             this.cbOrigen = new System.Windows.Forms.ComboBox();
             this.btnAgregarEdificio = new System.Windows.Forms.Button();
             this.tbEdificio = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.Jerarquia.SuspendLayout();
             this.tabControlJerarquia.SuspendLayout();
@@ -82,7 +83,6 @@
             this.tabRecorrer.SuspendLayout();
             this.Rutas.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -109,6 +109,16 @@
             this.splitContainer1.Size = new System.Drawing.Size(1256, 567);
             this.splitContainer1.SplitterDistance = 248;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ArbolesGrafos.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(55, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(108, 128);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // btnSalir
             // 
@@ -166,7 +176,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.Jerarquia);
             this.tabControl1.Controls.Add(this.Rutas);
-            this.tabControl1.Location = new System.Drawing.Point(0, -23);
+            this.tabControl1.Location = new System.Drawing.Point(-3, -24);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -461,7 +471,7 @@
             this.Rutas.Location = new System.Drawing.Point(4, 25);
             this.Rutas.Name = "Rutas";
             this.Rutas.Padding = new System.Windows.Forms.Padding(3);
-            this.Rutas.Size = new System.Drawing.Size(997, 679);
+            this.Rutas.Size = new System.Drawing.Size(997, 561);
             this.Rutas.TabIndex = 1;
             this.Rutas.Text = "tabPage2";
             // 
@@ -583,9 +593,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblListaAdyacencia.Font = new System.Drawing.Font("Corbel", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListaAdyacencia.Location = new System.Drawing.Point(3, 6);
+            this.lblListaAdyacencia.Location = new System.Drawing.Point(0, 3);
             this.lblListaAdyacencia.Name = "lblListaAdyacencia";
-            this.lblListaAdyacencia.Size = new System.Drawing.Size(8, 0);
+            this.lblListaAdyacencia.Size = new System.Drawing.Size(458, 527);
             this.lblListaAdyacencia.TabIndex = 4;
             // 
             // btnValidarConexion
@@ -646,16 +656,6 @@
             this.tbEdificio.Size = new System.Drawing.Size(326, 33);
             this.tbEdificio.TabIndex = 6;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ArbolesGrafos.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(55, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(108, 128);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -672,6 +672,7 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.Jerarquia.ResumeLayout(false);
             this.Jerarquia.PerformLayout();
@@ -683,7 +684,6 @@
             this.Rutas.ResumeLayout(false);
             this.Rutas.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
