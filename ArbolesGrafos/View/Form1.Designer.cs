@@ -428,7 +428,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbNodosTotales.AutoSize = true;
             this.lbNodosTotales.Font = new System.Drawing.Font("Dubai", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNodosTotales.Location = new System.Drawing.Point(563, 465);
+            this.lbNodosTotales.Location = new System.Drawing.Point(583, 465);
             this.lbNodosTotales.Name = "lbNodosTotales";
             this.lbNodosTotales.Size = new System.Drawing.Size(29, 39);
             this.lbNodosTotales.TabIndex = 13;
@@ -441,7 +441,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbNodosHijos.AutoSize = true;
             this.lbNodosHijos.Font = new System.Drawing.Font("Dubai", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNodosHijos.Location = new System.Drawing.Point(541, 505);
+            this.lbNodosHijos.Location = new System.Drawing.Point(558, 505);
             this.lbNodosHijos.Name = "lbNodosHijos";
             this.lbNodosHijos.Size = new System.Drawing.Size(29, 39);
             this.lbNodosHijos.TabIndex = 14;
