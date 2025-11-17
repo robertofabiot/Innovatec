@@ -63,6 +63,11 @@ namespace ArbolesGrafos.View
             {
                 MessageBox.Show("Por favor, ingrese un nombre para el puesto principal.", "Error del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+            lbNodosTotales.Text = Convert.ToString(tvJerarquia.GetNodeCount(true));
+            if (tvJerarquia.SelectedNode != null)
+            {
+                lbNodosHijos.Text = Convert.ToString(tvJerarquia.SelectedNode.GetNodeCount(true));
+            }
         }
 
         private void btnNuevoPuestoSubordinado_Click(object sender, EventArgs e)
@@ -85,6 +90,11 @@ namespace ArbolesGrafos.View
                 MessageBox.Show("Por favor, seleccione un puesto para añadirle un subordinado.", "Error del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             tbNuevoPuesto.Clear();
+            lbNodosTotales.Text = Convert.ToString(tvJerarquia.GetNodeCount(true));
+            if (tvJerarquia.SelectedNode != null) 
+            { 
+                lbNodosHijos.Text = Convert.ToString(tvJerarquia.SelectedNode.GetNodeCount(true)); 
+            }
         }
 
         private void ResaltarNodos(TreeNodeCollection nodos, string busqueda, Color colorResaltado, Color colorDefecto)
@@ -121,7 +131,7 @@ namespace ArbolesGrafos.View
             tabControlJerarquia.SelectedTab = tabInsertar;
             btnTabInsertar.Enabled = false;
             btnTabRecorrer.Enabled = true;
-            btnTabContar.Enabled = true;
+
         }
 
         private void btnRecorrer_Click(object sender, EventArgs e)
@@ -129,15 +139,6 @@ namespace ArbolesGrafos.View
             tabControlJerarquia.SelectedTab = tabRecorrer;
             btnTabInsertar.Enabled = true;
             btnTabRecorrer.Enabled = false;
-            btnTabContar.Enabled = true;
-        }
-
-        private void btnContar_Click(object sender, EventArgs e)
-        {
-            tabControlJerarquia.SelectedTab = tabContar;
-            btnTabInsertar.Enabled = true;
-            btnTabRecorrer.Enabled = true;
-            btnTabContar.Enabled = false;
         }
 
         #region Funciones Para Recorrer
@@ -216,5 +217,14 @@ namespace ArbolesGrafos.View
             await VisitarNodo(nodo, fuenteRes, fuenteDef);
         }
         #endregion
+
+        private void tvJerarquia_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            lbNodosTotales.Text = Convert.ToString(tvJerarquia.GetNodeCount(true));
+            if (tvJerarquia.SelectedNode != null)
+            {
+                lbNodosHijos.Text = Convert.ToString(tvJerarquia.SelectedNode.GetNodeCount(true));
+            }
+        }
     }
 }
