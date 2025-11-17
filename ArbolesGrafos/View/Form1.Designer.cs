@@ -542,7 +542,6 @@
             this.lblListaAdyacencia.Name = "lblListaAdyacencia";
             this.lblListaAdyacencia.Size = new System.Drawing.Size(447, 583);
             this.lblListaAdyacencia.TabIndex = 4;
-            this.lblListaAdyacencia.Text = "ListaAdyacencia";
             // 
             // panel1
             // 
