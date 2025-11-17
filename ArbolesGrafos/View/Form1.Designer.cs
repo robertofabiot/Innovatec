@@ -163,7 +163,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.Jerarquia);
             this.tabControl1.Controls.Add(this.Rutas);
-            this.tabControl1.Location = new System.Drawing.Point(13, 12);
+            this.tabControl1.Location = new System.Drawing.Point(1, -24);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
