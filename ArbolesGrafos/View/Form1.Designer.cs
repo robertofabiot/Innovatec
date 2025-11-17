@@ -491,7 +491,7 @@
             // 
             this.cbDestino.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDestino.FormattingEnabled = true;
-            this.cbDestino.Location = new System.Drawing.Point(626, 133);
+            this.cbDestino.Location = new System.Drawing.Point(630, 133);
             this.cbDestino.Name = "cbDestino";
             this.cbDestino.Size = new System.Drawing.Size(176, 36);
             this.cbDestino.TabIndex = 15;
@@ -501,7 +501,7 @@
             // 
             this.cbOrigen.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbOrigen.FormattingEnabled = true;
-            this.cbOrigen.Location = new System.Drawing.Point(626, 188);
+            this.cbOrigen.Location = new System.Drawing.Point(630, 188);
             this.cbOrigen.Name = "cbOrigen";
             this.cbOrigen.Size = new System.Drawing.Size(176, 36);
             this.cbOrigen.TabIndex = 13;
@@ -527,7 +527,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbEdificio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbEdificio.Font = new System.Drawing.Font("Corbel", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEdificio.Location = new System.Drawing.Point(642, 10);
+            this.tbEdificio.Location = new System.Drawing.Point(644, 10);
             this.tbEdificio.Name = "tbEdificio";
             this.tbEdificio.Size = new System.Drawing.Size(273, 33);
             this.tbEdificio.TabIndex = 6;
@@ -560,7 +560,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(485, 14);
+            this.label8.Location = new System.Drawing.Point(471, 14);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(152, 28);
             this.label8.TabIndex = 18;
@@ -573,7 +573,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(530, 136);
+            this.label9.Location = new System.Drawing.Point(525, 136);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(90, 28);
             this.label9.TabIndex = 24;
@@ -586,7 +586,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(537, 191);
+            this.label10.Location = new System.Drawing.Point(532, 191);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(83, 28);
             this.label10.TabIndex = 25;
@@ -612,7 +612,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbDistancia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbDistancia.Font = new System.Drawing.Font("Corbel", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDistancia.Location = new System.Drawing.Point(626, 252);
+            this.tbDistancia.Location = new System.Drawing.Point(631, 252);
             this.tbDistancia.Name = "tbDistancia";
             this.tbDistancia.Size = new System.Drawing.Size(252, 33);
             this.tbDistancia.TabIndex = 16;
@@ -624,7 +624,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(516, 252);
+            this.label2.Location = new System.Drawing.Point(509, 252);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 28);
             this.label2.TabIndex = 17;
