@@ -156,7 +156,7 @@ namespace ArbolesGrafos.View
                         await RecorrerPreorden(raiz, colorResaltadoFuente, colorDefectoFuente);
                         break;
                     case "Inorden":
-                        //await RecorrerInorden(raiz, colorResaltadoFuente, colorDefectoFuente);
+                        await RecorrerInorden(raiz, colorResaltadoFuente, colorDefectoFuente);
                         break;
                     case "Postorden":
                         //await RecorrerPostorden(raiz, colorResaltadoFuente, colorDefectoFuente);
@@ -185,6 +185,25 @@ namespace ArbolesGrafos.View
                 await RecorrerPreorden(hijo, fuenteRes, fuenteDef);
             }
         }
+
+        private async Task RecorrerInorden(TreeNode nodo, Color fuenteRes, Color fuenteDef)
+        {
+            if (nodo == null) return;
+        
+            if (nodo.Nodes.Count > 0)
+            {
+                await RecorrerInorden(nodo.Nodes[0], fuenteRes, fuenteDef);
+            }
+
+            await VisitarNodo(nodo, fuenteRes, fuenteDef);
+
+            for (int i = 1; i < nodo.Nodes.Count; i++)
+            {
+                await RecorrerInorden(nodo.Nodes[i], fuenteRes, fuenteDef);
+            }
+        }
+
+
         #endregion
     }
 }

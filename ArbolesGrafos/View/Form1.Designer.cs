@@ -231,6 +231,7 @@
             this.tvJerarquia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(235)))));
             this.tvJerarquia.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tvJerarquia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(56)))));
+            this.tvJerarquia.HideSelection = false;
             this.tvJerarquia.Location = new System.Drawing.Point(6, 5);
             this.tvJerarquia.Name = "tvJerarquia";
             this.tvJerarquia.Size = new System.Drawing.Size(395, 542);
