@@ -19,7 +19,6 @@ namespace ArbolesGrafos.View
             tabControlJerarquia.Appearance = TabAppearance.FlatButtons;
             tabControlJerarquia.ItemSize = new Size(0, 1);
             tabControlJerarquia.SizeMode = TabSizeMode.Fixed;
-
         }
 
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
@@ -85,7 +84,7 @@ namespace ArbolesGrafos.View
             {
                 MessageBox.Show("Por favor, seleccione un puesto para añadirle un subordinado.", "Error del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            tbNuevoPuesto.Clear(); 
+            tbNuevoPuesto.Clear();
         }
 
         private void ResaltarNodos(TreeNodeCollection nodos, string busqueda, Color colorResaltado, Color colorDefecto)
@@ -141,11 +140,51 @@ namespace ArbolesGrafos.View
             btnTabContar.Enabled = false;
         }
 
-        private void btnRecorrer_Click_1(object sender, EventArgs e)
+        #region Funciones Para Recorrer
+        private async void btnRecorrer_Click_1(object sender, EventArgs e)
         {
+            Color colorDefectoFuente = tvJerarquia.ForeColor;
+            Color colorResaltadoFuente = Color.Red;
             string tipo = cbTipoRecorrido.SelectedItem.ToString();
             tvJerarquia.ExpandAll();
+
+            foreach (TreeNode raiz in tvJerarquia.Nodes)
+            {
+                switch (tipo)
+                {
+                    case "Preorden":
+                        await RecorrerPreorden(raiz, colorResaltadoFuente, colorDefectoFuente);
+                        break;
+                    case "Inorden":
+                        //await RecorrerInorden(raiz, colorResaltadoFuente, colorDefectoFuente);
+                        break;
+                    case "Postorden":
+                        //await RecorrerPostorden(raiz, colorResaltadoFuente, colorDefectoFuente);
+                        break;
+                }
+            }
         }
+
+        private async Task VisitarNodo(TreeNode nodo, Color fuenteRes, Color fuenteDef)
+        {
+            nodo.ForeColor = fuenteRes;
+            nodo.EnsureVisible();
+
+            await Task.Delay(500);
+       
+            nodo.ForeColor = fuenteDef;
+        }
+
+        private async Task RecorrerPreorden(TreeNode nodo, Color fuenteRes, Color fuenteDef)
+        {
+            if (nodo == null) return;
+            await VisitarNodo(nodo, fuenteRes, fuenteDef);
+
+            foreach (TreeNode hijo in nodo.Nodes)
+            {
+                await RecorrerPreorden(hijo, fuenteRes, fuenteDef);
+            }
+        }
+        #endregion
     }
-    
 }
