@@ -30,11 +30,15 @@ namespace ArbolesGrafos.View
         private void btnJerarquia_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedTab = Jerarquia;
+            btnJerarquia.Enabled = false;
+            btnRutas.Enabled = true;
         }
 
         private void btnRutas_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedTab = Rutas;
+            btnJerarquia.Enabled = true;
+            btnRutas.Enabled = false;
         }
     }
 }
