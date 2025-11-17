@@ -146,6 +146,7 @@ namespace ArbolesGrafos.View
             Color colorDefectoFuente = tvJerarquia.ForeColor;
             Color colorResaltadoFuente = Color.Red;
             string tipo = cbTipoRecorrido.SelectedItem.ToString();
+            tvJerarquia.SelectedNode = null;
             tvJerarquia.ExpandAll();
 
             foreach (TreeNode raiz in tvJerarquia.Nodes)
@@ -159,7 +160,7 @@ namespace ArbolesGrafos.View
                         await RecorrerInorden(raiz, colorResaltadoFuente, colorDefectoFuente);
                         break;
                     case "Postorden":
-                        //await RecorrerPostorden(raiz, colorResaltadoFuente, colorDefectoFuente);
+                        await RecorrerPostorden(raiz, colorResaltadoFuente, colorDefectoFuente);
                         break;
                 }
             }
@@ -203,7 +204,17 @@ namespace ArbolesGrafos.View
             }
         }
 
+        private async Task RecorrerPostorden(TreeNode nodo, Color fuenteRes, Color fuenteDef)
+        {
+            if (nodo == null) return;
 
+            foreach (TreeNode hijo in nodo.Nodes)
+            {
+                await RecorrerPostorden(hijo, fuenteRes, fuenteDef);
+            }
+
+            await VisitarNodo(nodo, fuenteRes, fuenteDef);
+        }
         #endregion
     }
 }
