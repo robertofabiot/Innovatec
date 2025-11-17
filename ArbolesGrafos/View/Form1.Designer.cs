@@ -55,21 +55,21 @@
             this.tvJerarquia = new System.Windows.Forms.TreeView();
             this.label3 = new System.Windows.Forms.Label();
             this.Rutas = new System.Windows.Forms.TabPage();
-            this.btnValidarConexion = new System.Windows.Forms.Button();
+            this.btnVerListaAdyacencia = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnCalcularRuta = new System.Windows.Forms.Button();
+            this.tbDistancia = new System.Windows.Forms.TextBox();
+            this.btnAgregarRuta = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblListaAdyacencia = new System.Windows.Forms.Label();
+            this.btnValidarConexion = new System.Windows.Forms.Button();
             this.cbDestino = new System.Windows.Forms.ComboBox();
             this.cbOrigen = new System.Windows.Forms.ComboBox();
             this.btnAgregarEdificio = new System.Windows.Forms.Button();
             this.tbEdificio = new System.Windows.Forms.TextBox();
-            this.lblListaAdyacencia = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.btnAgregarRuta = new System.Windows.Forms.Button();
-            this.tbDistancia = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnVerListaAdyacencia = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -104,7 +104,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.tabControl1);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(1190, 635);
-            this.splitContainer1.SplitterDistance = 236;
+            this.splitContainer1.SplitterDistance = 235;
             this.splitContainer1.TabIndex = 0;
             // 
             // btnSalir
@@ -167,7 +167,7 @@
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(951, 658);
+            this.tabControl1.Size = new System.Drawing.Size(952, 658);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControl1.TabIndex = 0;
             // 
@@ -188,7 +188,7 @@
             this.Jerarquia.Margin = new System.Windows.Forms.Padding(0);
             this.Jerarquia.Name = "Jerarquia";
             this.Jerarquia.Padding = new System.Windows.Forms.Padding(3);
-            this.Jerarquia.Size = new System.Drawing.Size(943, 629);
+            this.Jerarquia.Size = new System.Drawing.Size(944, 629);
             this.Jerarquia.TabIndex = 0;
             this.Jerarquia.Text = "tabPage1";
             // 
@@ -408,7 +408,7 @@
             this.tbBuscar.Font = new System.Drawing.Font("Corbel", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbBuscar.Location = new System.Drawing.Point(527, 28);
             this.tbBuscar.Name = "tbBuscar";
-            this.tbBuscar.Size = new System.Drawing.Size(412, 33);
+            this.tbBuscar.Size = new System.Drawing.Size(413, 33);
             this.tbBuscar.TabIndex = 5;
             this.tbBuscar.TextChanged += new System.EventHandler(this.tbBuscar_TextChanged);
             // 
@@ -461,18 +461,31 @@
             this.Rutas.TabIndex = 1;
             this.Rutas.Text = "tabPage2";
             // 
-            // btnValidarConexion
+            // btnVerListaAdyacencia
             // 
-            this.btnValidarConexion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(235)))));
-            this.btnValidarConexion.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnValidarConexion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(56)))));
-            this.btnValidarConexion.Location = new System.Drawing.Point(591, 387);
-            this.btnValidarConexion.Name = "btnValidarConexion";
-            this.btnValidarConexion.Size = new System.Drawing.Size(198, 47);
-            this.btnValidarConexion.TabIndex = 19;
-            this.btnValidarConexion.Text = "Validar conexión";
-            this.btnValidarConexion.UseVisualStyleBackColor = false;
-            this.btnValidarConexion.Click += new System.EventHandler(this.btnValidarConexion_Click);
+            this.btnVerListaAdyacencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(235)))));
+            this.btnVerListaAdyacencia.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerListaAdyacencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(56)))));
+            this.btnVerListaAdyacencia.Location = new System.Drawing.Point(542, 462);
+            this.btnVerListaAdyacencia.Name = "btnVerListaAdyacencia";
+            this.btnVerListaAdyacencia.Size = new System.Drawing.Size(287, 47);
+            this.btnVerListaAdyacencia.TabIndex = 26;
+            this.btnVerListaAdyacencia.Text = "Ver lista de adyacencia";
+            this.btnVerListaAdyacencia.UseVisualStyleBackColor = false;
+            this.btnVerListaAdyacencia.Click += new System.EventHandler(this.btnVerListaAdyacencia_Click);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(509, 252);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 28);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Distancia:";
             // 
             // btnCalcularRuta
             // 
@@ -486,6 +499,103 @@
             this.btnCalcularRuta.Text = "Calcular Ruta";
             this.btnCalcularRuta.UseVisualStyleBackColor = false;
             this.btnCalcularRuta.Click += new System.EventHandler(this.btnCalcularRuta_Click);
+            // 
+            // tbDistancia
+            // 
+            this.tbDistancia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbDistancia.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbDistancia.Font = new System.Drawing.Font("Corbel", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDistancia.Location = new System.Drawing.Point(631, 252);
+            this.tbDistancia.Name = "tbDistancia";
+            this.tbDistancia.Size = new System.Drawing.Size(252, 33);
+            this.tbDistancia.TabIndex = 16;
+            // 
+            // btnAgregarRuta
+            // 
+            this.btnAgregarRuta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(235)))));
+            this.btnAgregarRuta.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarRuta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(56)))));
+            this.btnAgregarRuta.Location = new System.Drawing.Point(479, 309);
+            this.btnAgregarRuta.Name = "btnAgregarRuta";
+            this.btnAgregarRuta.Size = new System.Drawing.Size(198, 47);
+            this.btnAgregarRuta.TabIndex = 17;
+            this.btnAgregarRuta.Text = "Agregar Ruta";
+            this.btnAgregarRuta.UseVisualStyleBackColor = false;
+            this.btnAgregarRuta.Click += new System.EventHandler(this.btnAgregarRuta_Click);
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(532, 191);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(83, 28);
+            this.label10.TabIndex = 25;
+            this.label10.Text = "Origen:";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(525, 136);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(90, 28);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "Destino:";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(471, 14);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(152, 28);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Nuevo edificio:";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(235)))));
+            this.panel1.Controls.Add(this.lblListaAdyacencia);
+            this.panel1.Location = new System.Drawing.Point(4, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(453, 595);
+            this.panel1.TabIndex = 22;
+            // 
+            // lblListaAdyacencia
+            // 
+            this.lblListaAdyacencia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblListaAdyacencia.Font = new System.Drawing.Font("Corbel", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListaAdyacencia.Location = new System.Drawing.Point(3, 6);
+            this.lblListaAdyacencia.Name = "lblListaAdyacencia";
+            this.lblListaAdyacencia.Size = new System.Drawing.Size(447, 583);
+            this.lblListaAdyacencia.TabIndex = 4;
+            // 
+            // btnValidarConexion
+            // 
+            this.btnValidarConexion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(235)))));
+            this.btnValidarConexion.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnValidarConexion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(56)))));
+            this.btnValidarConexion.Location = new System.Drawing.Point(591, 387);
+            this.btnValidarConexion.Name = "btnValidarConexion";
+            this.btnValidarConexion.Size = new System.Drawing.Size(198, 47);
+            this.btnValidarConexion.TabIndex = 19;
+            this.btnValidarConexion.Text = "Validar conexión";
+            this.btnValidarConexion.UseVisualStyleBackColor = false;
+            this.btnValidarConexion.Click += new System.EventHandler(this.btnValidarConexion_Click);
             // 
             // cbDestino
             // 
@@ -531,116 +641,6 @@
             this.tbEdificio.Name = "tbEdificio";
             this.tbEdificio.Size = new System.Drawing.Size(273, 33);
             this.tbEdificio.TabIndex = 6;
-            // 
-            // lblListaAdyacencia
-            // 
-            this.lblListaAdyacencia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblListaAdyacencia.Font = new System.Drawing.Font("Corbel", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListaAdyacencia.Location = new System.Drawing.Point(3, 6);
-            this.lblListaAdyacencia.Name = "lblListaAdyacencia";
-            this.lblListaAdyacencia.Size = new System.Drawing.Size(447, 583);
-            this.lblListaAdyacencia.TabIndex = 4;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(235)))));
-            this.panel1.Controls.Add(this.lblListaAdyacencia);
-            this.panel1.Location = new System.Drawing.Point(4, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(453, 595);
-            this.panel1.TabIndex = 22;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(471, 14);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(152, 28);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "Nuevo edificio:";
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(525, 136);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(90, 28);
-            this.label9.TabIndex = 24;
-            this.label9.Text = "Destino:";
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(532, 191);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(83, 28);
-            this.label10.TabIndex = 25;
-            this.label10.Text = "Origen:";
-            // 
-            // btnAgregarRuta
-            // 
-            this.btnAgregarRuta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(235)))));
-            this.btnAgregarRuta.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarRuta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(56)))));
-            this.btnAgregarRuta.Location = new System.Drawing.Point(479, 309);
-            this.btnAgregarRuta.Name = "btnAgregarRuta";
-            this.btnAgregarRuta.Size = new System.Drawing.Size(198, 47);
-            this.btnAgregarRuta.TabIndex = 17;
-            this.btnAgregarRuta.Text = "Agregar Ruta";
-            this.btnAgregarRuta.UseVisualStyleBackColor = false;
-            this.btnAgregarRuta.Click += new System.EventHandler(this.btnAgregarRuta_Click);
-            // 
-            // tbDistancia
-            // 
-            this.tbDistancia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbDistancia.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbDistancia.Font = new System.Drawing.Font("Corbel", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDistancia.Location = new System.Drawing.Point(631, 252);
-            this.tbDistancia.Name = "tbDistancia";
-            this.tbDistancia.Size = new System.Drawing.Size(252, 33);
-            this.tbDistancia.TabIndex = 16;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(509, 252);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 28);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Distancia:";
-            // 
-            // btnVerListaAdyacencia
-            // 
-            this.btnVerListaAdyacencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(235)))));
-            this.btnVerListaAdyacencia.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerListaAdyacencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(56)))));
-            this.btnVerListaAdyacencia.Location = new System.Drawing.Point(542, 462);
-            this.btnVerListaAdyacencia.Name = "btnVerListaAdyacencia";
-            this.btnVerListaAdyacencia.Size = new System.Drawing.Size(287, 47);
-            this.btnVerListaAdyacencia.TabIndex = 26;
-            this.btnVerListaAdyacencia.Text = "Ver lista de adyacencia";
-            this.btnVerListaAdyacencia.UseVisualStyleBackColor = false;
-            this.btnVerListaAdyacencia.Click += new System.EventHandler(this.btnVerListaAdyacencia_Click);
             // 
             // Form1
             // 
