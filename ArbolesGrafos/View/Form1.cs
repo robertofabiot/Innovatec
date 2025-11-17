@@ -274,6 +274,12 @@ namespace ArbolesGrafos.View
             await VisitarNodo(nodo, fuenteRes, fuenteDef);
         }
         #endregion
+
+        /// <summary>
+        /// Actualiza la cuenta de nodos después de una selección en el árbol.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tvJerarquia_AfterSelect(object sender, TreeViewEventArgs e)
         {
             lbNodosTotales.Text = Convert.ToString(tvJerarquia.GetNodeCount(true));
