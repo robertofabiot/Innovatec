@@ -121,24 +121,30 @@ namespace ArbolesGrafos.View
         {
             tabControlJerarquia.SelectedTab = tabInsertar;
             btnTabInsertar.Enabled = false;
-            btnRecorrer.Enabled = true;
-            btnContar.Enabled = true;
+            btnTabRecorrer.Enabled = true;
+            btnTabContar.Enabled = true;
         }
 
         private void btnRecorrer_Click(object sender, EventArgs e)
         {
             tabControlJerarquia.SelectedTab = tabRecorrer;
             btnTabInsertar.Enabled = true;
-            btnRecorrer.Enabled = false;
-            btnContar.Enabled = true;
+            btnTabRecorrer.Enabled = false;
+            btnTabContar.Enabled = true;
         }
 
         private void btnContar_Click(object sender, EventArgs e)
         {
             tabControlJerarquia.SelectedTab = tabContar;
             btnTabInsertar.Enabled = true;
-            btnRecorrer.Enabled = true;
-            btnContar.Enabled = false;
+            btnTabRecorrer.Enabled = true;
+            btnTabContar.Enabled = false;
+        }
+
+        private void btnRecorrer_Click_1(object sender, EventArgs e)
+        {
+            string tipo = cbTipoRecorrido.SelectedItem.ToString();
+            tvJerarquia.ExpandAll();
         }
     }
     

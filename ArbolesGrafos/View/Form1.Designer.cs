@@ -49,8 +49,11 @@
             this.btnNuevoPuestoPrincipal = new System.Windows.Forms.Button();
             this.btnNuevoPuestoSubordinado = new System.Windows.Forms.Button();
             this.btnTabInsertar = new System.Windows.Forms.Button();
+            this.btnTabRecorrer = new System.Windows.Forms.Button();
+            this.btnTabContar = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbTipoRecorrido = new System.Windows.Forms.ComboBox();
             this.btnRecorrer = new System.Windows.Forms.Button();
-            this.btnContar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -59,6 +62,7 @@
             this.Jerarquia.SuspendLayout();
             this.tabControlJerarquia.SuspendLayout();
             this.tabInsertar.SuspendLayout();
+            this.tabRecorrer.SuspendLayout();
             this.Rutas.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -153,8 +157,8 @@
             // Jerarquia
             // 
             this.Jerarquia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
-            this.Jerarquia.Controls.Add(this.btnContar);
-            this.Jerarquia.Controls.Add(this.btnRecorrer);
+            this.Jerarquia.Controls.Add(this.btnTabContar);
+            this.Jerarquia.Controls.Add(this.btnTabRecorrer);
             this.Jerarquia.Controls.Add(this.btnTabInsertar);
             this.Jerarquia.Controls.Add(this.tabControlJerarquia);
             this.Jerarquia.Controls.Add(this.tbBuscar);
@@ -199,6 +203,9 @@
             // tabRecorrer
             // 
             this.tabRecorrer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.tabRecorrer.Controls.Add(this.btnRecorrer);
+            this.tabRecorrer.Controls.Add(this.cbTipoRecorrido);
+            this.tabRecorrer.Controls.Add(this.label5);
             this.tabRecorrer.Location = new System.Drawing.Point(4, 25);
             this.tabRecorrer.Name = "tabRecorrer";
             this.tabRecorrer.Padding = new System.Windows.Forms.Padding(3);
@@ -339,31 +346,70 @@
             this.btnTabInsertar.UseVisualStyleBackColor = false;
             this.btnTabInsertar.Click += new System.EventHandler(this.btnTabInsertar_Click);
             // 
+            // btnTabRecorrer
+            // 
+            this.btnTabRecorrer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(235)))));
+            this.btnTabRecorrer.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabRecorrer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(56)))));
+            this.btnTabRecorrer.Location = new System.Drawing.Point(553, 78);
+            this.btnTabRecorrer.Name = "btnTabRecorrer";
+            this.btnTabRecorrer.Size = new System.Drawing.Size(122, 47);
+            this.btnTabRecorrer.TabIndex = 11;
+            this.btnTabRecorrer.Text = "Recorrer";
+            this.btnTabRecorrer.UseVisualStyleBackColor = false;
+            this.btnTabRecorrer.Click += new System.EventHandler(this.btnRecorrer_Click);
+            // 
+            // btnTabContar
+            // 
+            this.btnTabContar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(235)))));
+            this.btnTabContar.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabContar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(56)))));
+            this.btnTabContar.Location = new System.Drawing.Point(687, 78);
+            this.btnTabContar.Name = "btnTabContar";
+            this.btnTabContar.Size = new System.Drawing.Size(122, 47);
+            this.btnTabContar.TabIndex = 12;
+            this.btnTabContar.Text = "Contar";
+            this.btnTabContar.UseVisualStyleBackColor = false;
+            this.btnTabContar.Click += new System.EventHandler(this.btnContar_Click);
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(6, 12);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(179, 28);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Tipo de recorrido:";
+            // 
+            // cbTipoRecorrido
+            // 
+            this.cbTipoRecorrido.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTipoRecorrido.FormattingEnabled = true;
+            this.cbTipoRecorrido.Items.AddRange(new object[] {
+            "Preorden",
+            "Inorden",
+            "Postorden"});
+            this.cbTipoRecorrido.Location = new System.Drawing.Point(192, 7);
+            this.cbTipoRecorrido.Name = "cbTipoRecorrido";
+            this.cbTipoRecorrido.Size = new System.Drawing.Size(176, 36);
+            this.cbTipoRecorrido.TabIndex = 9;
+            // 
             // btnRecorrer
             // 
-            this.btnRecorrer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(235)))));
+            this.btnRecorrer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(195)))), ((int)(((byte)(217)))));
             this.btnRecorrer.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecorrer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(56)))));
-            this.btnRecorrer.Location = new System.Drawing.Point(553, 78);
+            this.btnRecorrer.ForeColor = System.Drawing.Color.White;
+            this.btnRecorrer.Location = new System.Drawing.Point(124, 59);
             this.btnRecorrer.Name = "btnRecorrer";
-            this.btnRecorrer.Size = new System.Drawing.Size(122, 47);
-            this.btnRecorrer.TabIndex = 11;
-            this.btnRecorrer.Text = "Recorrer";
+            this.btnRecorrer.Size = new System.Drawing.Size(160, 62);
+            this.btnRecorrer.TabIndex = 10;
+            this.btnRecorrer.Text = "Ir";
             this.btnRecorrer.UseVisualStyleBackColor = false;
-            this.btnRecorrer.Click += new System.EventHandler(this.btnRecorrer_Click);
-            // 
-            // btnContar
-            // 
-            this.btnContar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(235)))));
-            this.btnContar.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(56)))));
-            this.btnContar.Location = new System.Drawing.Point(687, 78);
-            this.btnContar.Name = "btnContar";
-            this.btnContar.Size = new System.Drawing.Size(122, 47);
-            this.btnContar.TabIndex = 12;
-            this.btnContar.Text = "Contar";
-            this.btnContar.UseVisualStyleBackColor = false;
-            this.btnContar.Click += new System.EventHandler(this.btnContar_Click);
+            this.btnRecorrer.Click += new System.EventHandler(this.btnRecorrer_Click_1);
             // 
             // Form1
             // 
@@ -386,6 +432,8 @@
             this.tabControlJerarquia.ResumeLayout(false);
             this.tabInsertar.ResumeLayout(false);
             this.tabInsertar.PerformLayout();
+            this.tabRecorrer.ResumeLayout(false);
+            this.tabRecorrer.PerformLayout();
             this.Rutas.ResumeLayout(false);
             this.Rutas.PerformLayout();
             this.ResumeLayout(false);
@@ -415,7 +463,10 @@
         private System.Windows.Forms.TextBox tbNuevoPuesto;
         private System.Windows.Forms.Button btnNuevoPuestoSubordinado;
         private System.Windows.Forms.Button btnTabInsertar;
-        private System.Windows.Forms.Button btnContar;
+        private System.Windows.Forms.Button btnTabContar;
+        private System.Windows.Forms.Button btnTabRecorrer;
+        private System.Windows.Forms.ComboBox cbTipoRecorrido;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnRecorrer;
     }
 }
