@@ -419,7 +419,7 @@ namespace ArbolesGrafos.View
 
         #endregion
 
-        #region Métodos de Actualización de la Vista (Rutas) (AÑADIDO)
+        #region Métodos de Actualización de la Vista
         private void ActualizarComboBoxEdificios()
         {
             List<string> edificios = _rutaController.GetEdificios();

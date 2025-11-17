@@ -479,6 +479,7 @@
             this.btnMostrarAdyacencia.TabIndex = 20;
             this.btnMostrarAdyacencia.Text = "Mostrar Adyacencia";
             this.btnMostrarAdyacencia.UseVisualStyleBackColor = false;
+            this.btnMostrarAdyacencia.Click += new System.EventHandler(this.btnMostrarAdyacencia_Click);
             // 
             // btnValidarConexion
             // 
@@ -491,6 +492,7 @@
             this.btnValidarConexion.TabIndex = 19;
             this.btnValidarConexion.Text = "Validar conexión";
             this.btnValidarConexion.UseVisualStyleBackColor = false;
+            this.btnValidarConexion.Click += new System.EventHandler(this.btnValidarConexion_Click);
             // 
             // btnCalcularRuta
             // 
@@ -503,6 +505,7 @@
             this.btnCalcularRuta.TabIndex = 18;
             this.btnCalcularRuta.Text = "Calcular Ruta";
             this.btnCalcularRuta.UseVisualStyleBackColor = false;
+            this.btnCalcularRuta.Click += new System.EventHandler(this.btnCalcularRuta_Click);
             // 
             // btnAgregarRuta
             // 
@@ -515,6 +518,7 @@
             this.btnAgregarRuta.TabIndex = 17;
             this.btnAgregarRuta.Text = "Agregar Ruta";
             this.btnAgregarRuta.UseVisualStyleBackColor = false;
+            this.btnAgregarRuta.Click += new System.EventHandler(this.btnAgregarRuta_Click);
             // 
             // tbDistancia
             // 
@@ -572,6 +576,7 @@
             this.btnAgregarEdificio.TabIndex = 11;
             this.btnAgregarEdificio.Text = "Agregar Edificio";
             this.btnAgregarEdificio.UseVisualStyleBackColor = false;
+            this.btnAgregarEdificio.Click += new System.EventHandler(this.btnAgregarEdificio_Click);
             // 
             // tbEdificio
             // 
