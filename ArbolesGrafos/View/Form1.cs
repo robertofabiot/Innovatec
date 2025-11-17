@@ -16,9 +16,9 @@ namespace ArbolesGrafos.View
         {
             InitializeComponent();
             btnJerarquia.Enabled = false;
-            tabControl2.Appearance = TabAppearance.FlatButtons;
-            tabControl2.ItemSize = new Size(0, 1);
-            tabControl2.SizeMode = TabSizeMode.Fixed;
+            tabControlJerarquia.Appearance = TabAppearance.FlatButtons;
+            tabControlJerarquia.ItemSize = new Size(0, 1);
+            tabControlJerarquia.SizeMode = TabSizeMode.Fixed;
 
         }
 
@@ -58,7 +58,7 @@ namespace ArbolesGrafos.View
             if (!string.IsNullOrEmpty(nombreRaiz))
             {
                 tvJerarquia.Nodes.Add(nombreRaiz);
-                tbNuevoPuesto.Clear(); // Limpiamos el textbox
+                tbNuevoPuesto.Clear();
             }
             else
             {
@@ -87,6 +87,59 @@ namespace ArbolesGrafos.View
             }
             tbNuevoPuesto.Clear(); 
         }
+
+        private void ResaltarNodos(TreeNodeCollection nodos, string busqueda, Color colorResaltado, Color colorDefecto)
+        {
+            foreach (TreeNode nodo in nodos)
+            {
+                if (!string.IsNullOrEmpty(busqueda) && nodo.Text.ToLower().StartsWith(busqueda))
+                {
+                    nodo.ForeColor = colorResaltado;
+                }
+                else
+                {
+                    nodo.ForeColor = colorDefecto;
+                }
+                if (nodo.Nodes.Count > 0)
+                {
+                    ResaltarNodos(nodo.Nodes, busqueda, colorResaltado, colorDefecto);
+                }
+            }
+        }
+
+        private void tbBuscar_TextChanged(object sender, EventArgs e)
+        {
+            string busqueda = tbBuscar.Text.ToLower();
+
+            Color colorResaltado = Color.Red;
+            Color colorDefecto = tvJerarquia.ForeColor;
+            ResaltarNodos(tvJerarquia.Nodes, busqueda, colorResaltado, colorDefecto);
+            tvJerarquia.ExpandAll();
+        }
+
+        private void btnTabInsertar_Click(object sender, EventArgs e)
+        {
+            tabControlJerarquia.SelectedTab = tabInsertar;
+            btnTabInsertar.Enabled = false;
+            btnRecorrer.Enabled = true;
+            btnContar.Enabled = true;
+        }
+
+        private void btnRecorrer_Click(object sender, EventArgs e)
+        {
+            tabControlJerarquia.SelectedTab = tabRecorrer;
+            btnTabInsertar.Enabled = true;
+            btnRecorrer.Enabled = false;
+            btnContar.Enabled = true;
+        }
+
+        private void btnContar_Click(object sender, EventArgs e)
+        {
+            tabControlJerarquia.SelectedTab = tabContar;
+            btnTabInsertar.Enabled = true;
+            btnRecorrer.Enabled = true;
+            btnContar.Enabled = false;
+        }
     }
-    }
+    
 }

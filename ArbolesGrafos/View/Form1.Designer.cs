@@ -35,7 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Jerarquia = new System.Windows.Forms.TabPage();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabControlJerarquia = new System.Windows.Forms.TabControl();
             this.tabInsertar = new System.Windows.Forms.TabPage();
             this.tabRecorrer = new System.Windows.Forms.TabPage();
             this.tbBuscar = new System.Windows.Forms.TextBox();
@@ -48,13 +48,16 @@
             this.tbNuevoPuesto = new System.Windows.Forms.TextBox();
             this.btnNuevoPuestoPrincipal = new System.Windows.Forms.Button();
             this.btnNuevoPuestoSubordinado = new System.Windows.Forms.Button();
+            this.btnTabInsertar = new System.Windows.Forms.Button();
+            this.btnRecorrer = new System.Windows.Forms.Button();
+            this.btnContar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Jerarquia.SuspendLayout();
-            this.tabControl2.SuspendLayout();
+            this.tabControlJerarquia.SuspendLayout();
             this.tabInsertar.SuspendLayout();
             this.Rutas.SuspendLayout();
             this.SuspendLayout();
@@ -150,7 +153,10 @@
             // Jerarquia
             // 
             this.Jerarquia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
-            this.Jerarquia.Controls.Add(this.tabControl2);
+            this.Jerarquia.Controls.Add(this.btnContar);
+            this.Jerarquia.Controls.Add(this.btnRecorrer);
+            this.Jerarquia.Controls.Add(this.btnTabInsertar);
+            this.Jerarquia.Controls.Add(this.tabControlJerarquia);
             this.Jerarquia.Controls.Add(this.tbBuscar);
             this.Jerarquia.Controls.Add(this.tvJerarquia);
             this.Jerarquia.Controls.Add(this.label3);
@@ -163,18 +169,18 @@
             this.Jerarquia.Text = "tabPage1";
             this.Jerarquia.Click += new System.EventHandler(this.Jerarquia_Click);
             // 
-            // tabControl2
+            // tabControlJerarquia
             // 
-            this.tabControl2.Controls.Add(this.tabInsertar);
-            this.tabControl2.Controls.Add(this.tabRecorrer);
-            this.tabControl2.Controls.Add(this.tabContar);
-            this.tabControl2.Location = new System.Drawing.Point(416, 115);
-            this.tabControl2.Margin = new System.Windows.Forms.Padding(0);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.Padding = new System.Drawing.Point(0, 0);
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(393, 432);
-            this.tabControl2.TabIndex = 6;
+            this.tabControlJerarquia.Controls.Add(this.tabInsertar);
+            this.tabControlJerarquia.Controls.Add(this.tabRecorrer);
+            this.tabControlJerarquia.Controls.Add(this.tabContar);
+            this.tabControlJerarquia.Location = new System.Drawing.Point(416, 115);
+            this.tabControlJerarquia.Margin = new System.Windows.Forms.Padding(0);
+            this.tabControlJerarquia.Name = "tabControlJerarquia";
+            this.tabControlJerarquia.Padding = new System.Drawing.Point(0, 0);
+            this.tabControlJerarquia.SelectedIndex = 0;
+            this.tabControlJerarquia.Size = new System.Drawing.Size(393, 432);
+            this.tabControlJerarquia.TabIndex = 6;
             // 
             // tabInsertar
             // 
@@ -211,6 +217,7 @@
             this.tbBuscar.Name = "tbBuscar";
             this.tbBuscar.Size = new System.Drawing.Size(282, 33);
             this.tbBuscar.TabIndex = 5;
+            this.tbBuscar.TextChanged += new System.EventHandler(this.tbBuscar_TextChanged);
             // 
             // tvJerarquia
             // 
@@ -264,7 +271,7 @@
             this.tabContar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
             this.tabContar.Location = new System.Drawing.Point(4, 25);
             this.tabContar.Name = "tabContar";
-            this.tabContar.Size = new System.Drawing.Size(385, 413);
+            this.tabContar.Size = new System.Drawing.Size(385, 403);
             this.tabContar.TabIndex = 2;
             this.tabContar.Text = "Contar";
             // 
@@ -275,7 +282,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 12);
+            this.label4.Location = new System.Drawing.Point(1, 13);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(149, 28);
             this.label4.TabIndex = 7;
@@ -288,7 +295,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbNuevoPuesto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbNuevoPuesto.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNuevoPuesto.Location = new System.Drawing.Point(155, 12);
+            this.tbNuevoPuesto.Location = new System.Drawing.Point(153, 13);
             this.tbNuevoPuesto.Name = "tbNuevoPuesto";
             this.tbNuevoPuesto.Size = new System.Drawing.Size(218, 29);
             this.tbNuevoPuesto.TabIndex = 7;
@@ -298,9 +305,9 @@
             this.btnNuevoPuestoPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(195)))), ((int)(((byte)(217)))));
             this.btnNuevoPuestoPrincipal.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevoPuestoPrincipal.ForeColor = System.Drawing.Color.White;
-            this.btnNuevoPuestoPrincipal.Location = new System.Drawing.Point(8, 56);
+            this.btnNuevoPuestoPrincipal.Location = new System.Drawing.Point(59, 72);
             this.btnNuevoPuestoPrincipal.Name = "btnNuevoPuestoPrincipal";
-            this.btnNuevoPuestoPrincipal.Size = new System.Drawing.Size(168, 62);
+            this.btnNuevoPuestoPrincipal.Size = new System.Drawing.Size(273, 62);
             this.btnNuevoPuestoPrincipal.TabIndex = 8;
             this.btnNuevoPuestoPrincipal.Text = "Nuevo Puesto Principal";
             this.btnNuevoPuestoPrincipal.UseVisualStyleBackColor = false;
@@ -311,13 +318,52 @@
             this.btnNuevoPuestoSubordinado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(195)))), ((int)(((byte)(217)))));
             this.btnNuevoPuestoSubordinado.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevoPuestoSubordinado.ForeColor = System.Drawing.Color.White;
-            this.btnNuevoPuestoSubordinado.Location = new System.Drawing.Point(205, 55);
+            this.btnNuevoPuestoSubordinado.Location = new System.Drawing.Point(59, 166);
             this.btnNuevoPuestoSubordinado.Name = "btnNuevoPuestoSubordinado";
-            this.btnNuevoPuestoSubordinado.Size = new System.Drawing.Size(168, 62);
+            this.btnNuevoPuestoSubordinado.Size = new System.Drawing.Size(275, 62);
             this.btnNuevoPuestoSubordinado.TabIndex = 9;
             this.btnNuevoPuestoSubordinado.Text = "Nuevo Puesto Subordinado";
             this.btnNuevoPuestoSubordinado.UseVisualStyleBackColor = false;
             this.btnNuevoPuestoSubordinado.Click += new System.EventHandler(this.btnNuevoPuestoSubordinado_Click);
+            // 
+            // btnTabInsertar
+            // 
+            this.btnTabInsertar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(235)))));
+            this.btnTabInsertar.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTabInsertar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(56)))));
+            this.btnTabInsertar.Location = new System.Drawing.Point(416, 78);
+            this.btnTabInsertar.Name = "btnTabInsertar";
+            this.btnTabInsertar.Size = new System.Drawing.Size(122, 47);
+            this.btnTabInsertar.TabIndex = 10;
+            this.btnTabInsertar.Text = "Insertar";
+            this.btnTabInsertar.UseVisualStyleBackColor = false;
+            this.btnTabInsertar.Click += new System.EventHandler(this.btnTabInsertar_Click);
+            // 
+            // btnRecorrer
+            // 
+            this.btnRecorrer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(235)))));
+            this.btnRecorrer.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecorrer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(56)))));
+            this.btnRecorrer.Location = new System.Drawing.Point(553, 78);
+            this.btnRecorrer.Name = "btnRecorrer";
+            this.btnRecorrer.Size = new System.Drawing.Size(122, 47);
+            this.btnRecorrer.TabIndex = 11;
+            this.btnRecorrer.Text = "Recorrer";
+            this.btnRecorrer.UseVisualStyleBackColor = false;
+            this.btnRecorrer.Click += new System.EventHandler(this.btnRecorrer_Click);
+            // 
+            // btnContar
+            // 
+            this.btnContar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(235)))));
+            this.btnContar.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(56)))));
+            this.btnContar.Location = new System.Drawing.Point(687, 78);
+            this.btnContar.Name = "btnContar";
+            this.btnContar.Size = new System.Drawing.Size(122, 47);
+            this.btnContar.TabIndex = 12;
+            this.btnContar.Text = "Contar";
+            this.btnContar.UseVisualStyleBackColor = false;
+            this.btnContar.Click += new System.EventHandler(this.btnContar_Click);
             // 
             // Form1
             // 
@@ -337,7 +383,7 @@
             this.tabControl1.ResumeLayout(false);
             this.Jerarquia.ResumeLayout(false);
             this.Jerarquia.PerformLayout();
-            this.tabControl2.ResumeLayout(false);
+            this.tabControlJerarquia.ResumeLayout(false);
             this.tabInsertar.ResumeLayout(false);
             this.tabInsertar.PerformLayout();
             this.Rutas.ResumeLayout(false);
@@ -360,7 +406,7 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.TreeView tvJerarquia;
         private System.Windows.Forms.TextBox tbBuscar;
-        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabControl tabControlJerarquia;
         private System.Windows.Forms.TabPage tabInsertar;
         private System.Windows.Forms.TabPage tabRecorrer;
         private System.Windows.Forms.TabPage tabContar;
@@ -368,5 +414,8 @@
         private System.Windows.Forms.Button btnNuevoPuestoPrincipal;
         private System.Windows.Forms.TextBox tbNuevoPuesto;
         private System.Windows.Forms.Button btnNuevoPuestoSubordinado;
+        private System.Windows.Forms.Button btnTabInsertar;
+        private System.Windows.Forms.Button btnContar;
+        private System.Windows.Forms.Button btnRecorrer;
     }
 }
