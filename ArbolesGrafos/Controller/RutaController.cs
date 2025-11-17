@@ -13,7 +13,9 @@ namespace ArbolesGrafos.Controller
         NombreVacio,
         EdificioYaExiste,
         EdificioNoExiste,
-        DistanciaInvalida
+        DistanciaInvalida,
+        RutaYaExiste,
+        RutaHaciaSiMismo
     }
 
     public class RutaController
@@ -40,10 +42,29 @@ namespace ArbolesGrafos.Controller
 
         public EstadoRuta AgregarRuta(string origen, string destino, int distancia)
         {
+            if (origen == destino)
+            {
+                return EstadoRuta.RutaHaciaSiMismo;
+            }
             if (!_adyacencias.ContainsKey(origen) || !_adyacencias.ContainsKey(destino))
                 return EstadoRuta.EdificioNoExiste;
             if (distancia <= 0)
                 return EstadoRuta.DistanciaInvalida;
+
+            bool yaExiste = false;
+            foreach (var conexion in _adyacencias[origen])
+            {
+                if (conexion.EdificioDestino == destino)
+                {
+                    yaExiste = true;
+                    break;
+                }
+            }
+
+            if (yaExiste)
+            {
+                return EstadoRuta.RutaYaExiste;
+            }
 
             _adyacencias[origen].Add(new Conexion(destino, distancia));
             _adyacencias[destino].Add(new Conexion(origen, distancia));

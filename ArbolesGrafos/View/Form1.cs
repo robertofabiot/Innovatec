@@ -303,6 +303,7 @@ namespace ArbolesGrafos.View
             {
                 ActualizarComboBoxEdificios();
                 tbEdificio.Clear();
+                ActualizarVistaAdyacencia();
             }
             else if (resultado == EstadoRuta.NombreVacio)
             {
@@ -337,14 +338,19 @@ namespace ArbolesGrafos.View
             {
                 MessageBox.Show("Ruta agregada exitosamente.");
                 tbDistancia.Clear();
+                ActualizarVistaAdyacencia();
             }
             else if (resultado == EstadoRuta.DistanciaInvalida)
             {
                 MessageBox.Show("La distancia debe ser un número positivo.");
             }
-            else if (resultado == EstadoRuta.EdificioNoExiste)
+            else if (resultado == EstadoRuta.RutaYaExiste)
             {
-                MessageBox.Show("El origen o destino no existe (Esto no debería pasar).");
+                MessageBox.Show("Error: Esa ruta ya existe entre los dos edificios.");
+            }
+            else if (resultado == EstadoRuta.RutaHaciaSiMismo)
+            {
+                MessageBox.Show("Error: Un edificio no puede tener una ruta hacia sí mismo.");
             }
         }
 
@@ -364,12 +370,12 @@ namespace ArbolesGrafos.View
             if (resultado.Encontrada)
             {
                 string rutaFormateada = string.Join(" -> ", resultado.Ruta);
-                lblResultadoRuta.Text = $"Ruta más corta: {rutaFormateada}\r\n";
-                lblResultadoRuta.Text += $"Distancia total: {resultado.DistanciaTotal} metros.";
+                lblListaAdyacencia.Text = $"Ruta más corta: {rutaFormateada}\r\n";
+                lblListaAdyacencia.Text += $"Distancia total: {resultado.DistanciaTotal} metros.";
             }
             else
             {
-                lblResultadoRuta.Text = $"Error: {resultado.MensajeError}";
+                lblListaAdyacencia.Text = $"Error: {resultado.MensajeError}";
             }
         }
 
@@ -387,7 +393,7 @@ namespace ArbolesGrafos.View
             }
         }
 
-        private void btnMostrarAdyacencia_Click(object sender, EventArgs e)
+        private void ActualizarVistaAdyacencia()
         {
             var adyacencias = _rutaController.GetAdyacencias();
 
@@ -414,7 +420,7 @@ namespace ArbolesGrafos.View
                     sb.Append(Environment.NewLine);
                 }
             }
-            lblListaAdyacencia.Text = sb.ToString(); 
+            lblListaAdyacencia.Text = sb.ToString();
         }
 
         #endregion
@@ -429,5 +435,10 @@ namespace ArbolesGrafos.View
         }
 
         #endregion
+
+        private void btnVerListaAdyacencia_Click(object sender, EventArgs e)
+        {
+            ActualizarVistaAdyacencia();
+        }
     }
 }
