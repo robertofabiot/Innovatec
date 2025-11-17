@@ -35,15 +35,27 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Jerarquia = new System.Windows.Forms.TabPage();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabInsertar = new System.Windows.Forms.TabPage();
+            this.tabRecorrer = new System.Windows.Forms.TabPage();
+            this.tbBuscar = new System.Windows.Forms.TextBox();
+            this.tvJerarquia = new System.Windows.Forms.TreeView();
             this.label3 = new System.Windows.Forms.Label();
             this.Rutas = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
+            this.tabContar = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tbNuevoPuesto = new System.Windows.Forms.TextBox();
+            this.btnNuevoPuestoPrincipal = new System.Windows.Forms.Button();
+            this.btnNuevoPuestoSubordinado = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Jerarquia.SuspendLayout();
+            this.tabControl2.SuspendLayout();
+            this.tabInsertar.SuspendLayout();
             this.Rutas.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -138,6 +150,9 @@
             // Jerarquia
             // 
             this.Jerarquia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.Jerarquia.Controls.Add(this.tabControl2);
+            this.Jerarquia.Controls.Add(this.tbBuscar);
+            this.Jerarquia.Controls.Add(this.tvJerarquia);
             this.Jerarquia.Controls.Add(this.label3);
             this.Jerarquia.Location = new System.Drawing.Point(4, 25);
             this.Jerarquia.Margin = new System.Windows.Forms.Padding(0);
@@ -146,6 +161,66 @@
             this.Jerarquia.Size = new System.Drawing.Size(828, 553);
             this.Jerarquia.TabIndex = 0;
             this.Jerarquia.Text = "tabPage1";
+            this.Jerarquia.Click += new System.EventHandler(this.Jerarquia_Click);
+            // 
+            // tabControl2
+            // 
+            this.tabControl2.Controls.Add(this.tabInsertar);
+            this.tabControl2.Controls.Add(this.tabRecorrer);
+            this.tabControl2.Controls.Add(this.tabContar);
+            this.tabControl2.Location = new System.Drawing.Point(416, 115);
+            this.tabControl2.Margin = new System.Windows.Forms.Padding(0);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.Padding = new System.Drawing.Point(0, 0);
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(393, 432);
+            this.tabControl2.TabIndex = 6;
+            // 
+            // tabInsertar
+            // 
+            this.tabInsertar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.tabInsertar.Controls.Add(this.btnNuevoPuestoSubordinado);
+            this.tabInsertar.Controls.Add(this.btnNuevoPuestoPrincipal);
+            this.tabInsertar.Controls.Add(this.tbNuevoPuesto);
+            this.tabInsertar.Controls.Add(this.label4);
+            this.tabInsertar.Location = new System.Drawing.Point(4, 25);
+            this.tabInsertar.Margin = new System.Windows.Forms.Padding(0);
+            this.tabInsertar.Name = "tabInsertar";
+            this.tabInsertar.Size = new System.Drawing.Size(385, 403);
+            this.tabInsertar.TabIndex = 0;
+            this.tabInsertar.Text = "Insertar";
+            // 
+            // tabRecorrer
+            // 
+            this.tabRecorrer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.tabRecorrer.Location = new System.Drawing.Point(4, 25);
+            this.tabRecorrer.Name = "tabRecorrer";
+            this.tabRecorrer.Padding = new System.Windows.Forms.Padding(3);
+            this.tabRecorrer.Size = new System.Drawing.Size(385, 403);
+            this.tabRecorrer.TabIndex = 1;
+            this.tabRecorrer.Text = "Recorrer";
+            // 
+            // tbBuscar
+            // 
+            this.tbBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbBuscar.Font = new System.Drawing.Font("Corbel", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbBuscar.Location = new System.Drawing.Point(527, 28);
+            this.tbBuscar.Name = "tbBuscar";
+            this.tbBuscar.Size = new System.Drawing.Size(282, 33);
+            this.tbBuscar.TabIndex = 5;
+            // 
+            // tvJerarquia
+            // 
+            this.tvJerarquia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(214)))), ((int)(((byte)(235)))));
+            this.tvJerarquia.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tvJerarquia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(32)))), ((int)(((byte)(56)))));
+            this.tvJerarquia.Location = new System.Drawing.Point(6, 5);
+            this.tvJerarquia.Name = "tvJerarquia";
+            this.tvJerarquia.Size = new System.Drawing.Size(395, 542);
+            this.tvJerarquia.TabIndex = 4;
             // 
             // label3
             // 
@@ -153,12 +228,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(257, 211);
+            this.label3.Font = new System.Drawing.Font("Corbel", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(420, 28);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(168, 37);
+            this.label3.Size = new System.Drawing.Size(93, 35);
             this.label3.TabIndex = 3;
-            this.label3.Text = "JERARQUIA";
+            this.label3.Text = "Buscar";
             // 
             // Rutas
             // 
@@ -184,6 +259,66 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "RUTAS";
             // 
+            // tabContar
+            // 
+            this.tabContar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.tabContar.Location = new System.Drawing.Point(4, 25);
+            this.tabContar.Name = "tabContar";
+            this.tabContar.Size = new System.Drawing.Size(385, 413);
+            this.tabContar.TabIndex = 2;
+            this.tabContar.Text = "Contar";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(3, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(149, 28);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Nuevo puesto:";
+            // 
+            // tbNuevoPuesto
+            // 
+            this.tbNuevoPuesto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbNuevoPuesto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbNuevoPuesto.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNuevoPuesto.Location = new System.Drawing.Point(155, 12);
+            this.tbNuevoPuesto.Name = "tbNuevoPuesto";
+            this.tbNuevoPuesto.Size = new System.Drawing.Size(218, 29);
+            this.tbNuevoPuesto.TabIndex = 7;
+            // 
+            // btnNuevoPuestoPrincipal
+            // 
+            this.btnNuevoPuestoPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(195)))), ((int)(((byte)(217)))));
+            this.btnNuevoPuestoPrincipal.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoPuestoPrincipal.ForeColor = System.Drawing.Color.White;
+            this.btnNuevoPuestoPrincipal.Location = new System.Drawing.Point(8, 56);
+            this.btnNuevoPuestoPrincipal.Name = "btnNuevoPuestoPrincipal";
+            this.btnNuevoPuestoPrincipal.Size = new System.Drawing.Size(168, 62);
+            this.btnNuevoPuestoPrincipal.TabIndex = 8;
+            this.btnNuevoPuestoPrincipal.Text = "Nuevo Puesto Principal";
+            this.btnNuevoPuestoPrincipal.UseVisualStyleBackColor = false;
+            this.btnNuevoPuestoPrincipal.Click += new System.EventHandler(this.btnNuevoPuestoPrincipal_Click);
+            // 
+            // btnNuevoPuestoSubordinado
+            // 
+            this.btnNuevoPuestoSubordinado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(195)))), ((int)(((byte)(217)))));
+            this.btnNuevoPuestoSubordinado.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoPuestoSubordinado.ForeColor = System.Drawing.Color.White;
+            this.btnNuevoPuestoSubordinado.Location = new System.Drawing.Point(205, 55);
+            this.btnNuevoPuestoSubordinado.Name = "btnNuevoPuestoSubordinado";
+            this.btnNuevoPuestoSubordinado.Size = new System.Drawing.Size(168, 62);
+            this.btnNuevoPuestoSubordinado.TabIndex = 9;
+            this.btnNuevoPuestoSubordinado.Text = "Nuevo Puesto Subordinado";
+            this.btnNuevoPuestoSubordinado.UseVisualStyleBackColor = false;
+            this.btnNuevoPuestoSubordinado.Click += new System.EventHandler(this.btnNuevoPuestoSubordinado_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -202,6 +337,9 @@
             this.tabControl1.ResumeLayout(false);
             this.Jerarquia.ResumeLayout(false);
             this.Jerarquia.PerformLayout();
+            this.tabControl2.ResumeLayout(false);
+            this.tabInsertar.ResumeLayout(false);
+            this.tabInsertar.PerformLayout();
             this.Rutas.ResumeLayout(false);
             this.Rutas.PerformLayout();
             this.ResumeLayout(false);
@@ -220,5 +358,15 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.TreeView tvJerarquia;
+        private System.Windows.Forms.TextBox tbBuscar;
+        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabPage tabInsertar;
+        private System.Windows.Forms.TabPage tabRecorrer;
+        private System.Windows.Forms.TabPage tabContar;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnNuevoPuestoPrincipal;
+        private System.Windows.Forms.TextBox tbNuevoPuesto;
+        private System.Windows.Forms.Button btnNuevoPuestoSubordinado;
     }
 }
